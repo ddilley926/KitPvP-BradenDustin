@@ -8,10 +8,13 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 
 import com.dustinbraden.KitPvP.Main;
 
+
 public class Events implements Listener {
 	public Main plugin;
 	public Events(Main instance){
 	plugin = instance;
+
+
 	}
 	
 	
