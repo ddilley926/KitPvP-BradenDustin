@@ -22,7 +22,6 @@ public class Main extends JavaPlugin {
 	public ArrayList<String> Flash = new ArrayList<String>();
 	public ArrayList<String> Grandpa = new ArrayList<String>();
 	
-	
 	//*****************************************//
 	//*************Level 2 ArrayLists*********//
 	//****************************************//
