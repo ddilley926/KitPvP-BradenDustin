@@ -2,7 +2,13 @@ package com.bradendustin.BDKitPvP;
 
 import java.util.ArrayList;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scoreboard.DisplaySlot;
+import org.bukkit.scoreboard.Objective;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.ScoreboardManager;
 
 public class Main extends JavaPlugin {
 	
@@ -44,8 +50,8 @@ public class Main extends JavaPlugin {
 	public ArrayList<String> Witch = new ArrayList<String>();
 	
 	//*****************************************//
-		//*************Level 5 ArrayLists*********//
-		//****************************************//
+	//*************Level 5 ArrayLists*********//
+	//****************************************//
 		
 		public ArrayList<String> ChemicalArcher = new ArrayList<String>();
 		public ArrayList<String> HorseRider = new ArrayList<String>();
@@ -56,6 +62,27 @@ public class Main extends JavaPlugin {
 	
 	public ArrayList<String> kitused = new ArrayList<String>();
 	
+	
+	public void onEnable(){
+		commands();
+		
+		ScoreboardManager manager = Bukkit.getScoreboardManager();
+		Scoreboard board = manager.getNewScoreboard();
+		 Objective kills = board.registerNewObjective("kills", "dplayerKillCount");
+		 kills.setDisplaySlot(DisplaySlot.SIDEBAR);
+		 kills.setDisplayName(ChatColor.RED + "Kills"); 
+		 
+		 Objective showhealth = board.registerNewObjective("showhealth", "health");
+		 showhealth.setDisplaySlot(DisplaySlot.BELOW_NAME);
+		 showhealth.setDisplayName("/ 20");
+	}
+	
+	
+	
+	
+	public void commands(){
+		
+	}
 	
 	
 }
