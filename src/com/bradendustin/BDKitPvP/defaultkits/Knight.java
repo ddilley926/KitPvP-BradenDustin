@@ -38,32 +38,8 @@ public class Knight implements CommandExecutor{
 	    p.getInventory().setLeggings(new ItemStack(Material.IRON_LEGGINGS));
 	    p.getInventory().addItem(new ItemStack(Material.DIAMOND_SWORD));
 	    p.getInventory().setLeggings(new ItemStack(Material.IRON_LEGGINGS));
+	    for(int i = 0; i<25; i++)
 	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-
 		p.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 2));
 	    
 	   }else{
