@@ -2,6 +2,11 @@ package com.bradendustin.BDKitPvP;
 
 import java.util.ArrayList;
 
+import com.bradendustin.BDKitPvP.defaultkits.*;
+import com.bradendustin.BDKitPvP.level2kits.*;
+import com.bradendustin.BDKitPvP.level3kits.*;
+import com.bradendustin.BDKitPvP.level4kits.*;
+import com.bradendustin.BDKitPvP.level5kits.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -80,6 +85,21 @@ public class Main extends JavaPlugin {
 	
 	public void commands(){
 		
+		//*****************************************//
+		//*************Level 1 Executors*********//
+		//****************************************//
+		getCommand("Knight").setExecutor(new Knight(this));
+		getCommand("Archer").setExecutor(new Archer(this));
+		getCommand("Fisherman").setExecutor(new Fisherman(this));
+		getCommand("Grandpa").setExecutor(new Grandpa(this));
+		
+		//*****************************************//
+		//*************Level 2 Executors*********//
+		//****************************************//
+		getCommand("Chemist").setExecutor(new Chemist(this));
+		getCommand("Archer").setExecutor(new Archer(this));
+		getCommand("Fisherman").setExecutor(new Fisherman(this));
+		getCommand("Grandpa").setExecutor(new Grandpa(this));
 	}
 	
 	

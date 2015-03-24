@@ -68,12 +68,16 @@ public class Events implements Listener {
         	 if(plugin.Archer.contains(p.getName())){
         			   plugin.Archer.remove(p.getName());
         		   }
-        	 if(plugin.Wizard.contains(p.getName())){
-  			   plugin.Wizard.remove(p.getName());
+        	 if(plugin.Fisherman.contains(p.getName())){
+  			   plugin.Fisherman.remove(p.getName());
   		   }
-        	 if(plugin.Tank.contains(p.getName())){
-    			   plugin.Tank.remove(p.getName());
+        	 if(plugin.Grandpa.contains(p.getName())){
+    			   plugin.Grandpa.remove(p.getName());
     		   }
+        	 if(plugin.Chemist.contains(p.getName())){
+  			   plugin.Chemist.remove(p.getName());
+        	 
+        	 }
         	 }
          }
 	 

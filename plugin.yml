@@ -1,0 +1,16 @@
+name: KitPvP
+author: Braden
+version: 1.0
+description: KitPvP
+main: me.bradendustin.BDKitPvP.Main
+commands:
+  Archer:
+    description: Gives the archer kit.
+  Fisherman:
+    description: Gives the fisherman kit.
+  Grandpa:
+    description: Gives the Grandpa kit.
+  Knight
+    description: Gives the Knight kit.
+  Chemist:
+    description: Gives the Chemist kit.
