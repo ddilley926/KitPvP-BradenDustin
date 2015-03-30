@@ -1,4 +1,4 @@
-package com.bradendustin.BDKitPvP.defaultkits;
+package com.bradendustin.BDKitPvP.level2kits;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Color;

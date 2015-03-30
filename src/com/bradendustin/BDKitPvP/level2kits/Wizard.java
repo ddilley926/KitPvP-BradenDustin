@@ -1,4 +1,4 @@
-package com.bradendustin.BDKitPvP.defaultkits;
+package com.bradendustin.BDKitPvP.level2kits;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -10,9 +10,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
-
 import com.bradendustin.BDKitPvP.Main;
 
 public class Wizard implements CommandExecutor{
@@ -39,29 +36,29 @@ public class Wizard implements CommandExecutor{
 	    
 	    ItemStack Helmet = new ItemStack(Material.LEATHER_HELMET);
 	    LeatherArmorMeta HMeta = (LeatherArmorMeta) Helmet.getItemMeta();
-	    HMeta.setColor(Color.BLACK);
+	    HMeta.setColor(Color.BLUE);
 	    Helmet.setItemMeta(HMeta);
 	    
 	    
 	    ItemStack Chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
 	    LeatherArmorMeta CMeta = (LeatherArmorMeta) Chestplate.getItemMeta();
-	    CMeta.setColor(Color.BLACK);
+	    CMeta.setColor(Color.BLUE);
 	    Chestplate.setItemMeta(CMeta);
 	    
 	    ItemStack Leggings = new ItemStack(Material.LEATHER_LEGGINGS);
 	    LeatherArmorMeta LMeta = (LeatherArmorMeta) Leggings.getItemMeta();
-	    LMeta.setColor(Color.BLACK);
+	    LMeta.setColor(Color.BLUE);
         Leggings.setItemMeta(LMeta);
-	    
+	 
 	    ItemStack Boots = new ItemStack(Material.LEATHER_BOOTS);
 	    LeatherArmorMeta BMeta = (LeatherArmorMeta) Boots.getItemMeta();
-	    BMeta.setColor(Color.BLACK);
+	    BMeta.setColor(Color.BLUE);
 	    Boots.setItemMeta(BMeta);
 	    
 	    ItemStack Wand = new ItemStack(Material.STONE_SWORD);
 	    ItemMeta WandMeta = Wand.getItemMeta();
 	    WandMeta.setDisplayName(ChatColor.RED + "Right click to shoot fireballs!");
-	    
+	    Wand.setItemMeta(WandMeta);
 	    
 	    p.getInventory().clear();
 	    p.getInventory().setHelmet(Helmet);
@@ -69,8 +66,6 @@ public class Wizard implements CommandExecutor{
 	    p.getInventory().setLeggings(Leggings);
 	    p.getInventory().setBoots(Boots);
 	    p.getInventory().addItem(Wand);
-	    
-	    
 	    for(int i = 0; i<25; i++)
 	    p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
 	 
