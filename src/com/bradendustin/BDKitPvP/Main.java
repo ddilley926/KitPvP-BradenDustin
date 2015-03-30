@@ -59,8 +59,15 @@ public class Main extends JavaPlugin {
 		public ArrayList<String> Titan = new ArrayList<String>();
 		public ArrayList<String> UltraFlash = new ArrayList<String>();
 		
-	
-	
+		//*****************************************//
+		//**********Donator ArrayLists*********//
+		//****************************************//
+		public ArrayList<String> Advanced = new ArrayList<String>();
+		public ArrayList<String> Expert = new ArrayList<String>();
+		public ArrayList<String> Demon = new ArrayList<String>();
+		public ArrayList<String> Veteran = new ArrayList<String>();
+		public ArrayList<String> God = new ArrayList<String>();
+		
 	public ArrayList<String> kitused = new ArrayList<String>();
 	
 	
@@ -106,9 +113,13 @@ public class Main extends JavaPlugin {
 		//*****************************************//
 		//*************Level 4 Executors*********//
 		//****************************************//
-		getCommand("ExplosiveArcher").setExecutor(new ExplosiveArcher(this));
 		getCommand("Shadow").setExecutor(new Shadow(this));
 		getCommand("Viper").setExecutor(new Viper(this));
+		//*****************************************//
+		//*************Level 5 Executors*********//
+		//****************************************//
+		getCommand("HorseRider").setExecutor(new HorseRider(this));
+		getCommand("Titan").setExecutor(new Titan(this));
 	}
 	
 	
