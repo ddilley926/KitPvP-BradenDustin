@@ -2,18 +2,25 @@ package com.bradendustin.BDKitPvP;
 
 import java.util.ArrayList;
 
-import com.bradendustin.BDKitPvP.defaultkits.*;
-import com.bradendustin.BDKitPvP.level2kits.*;
-import com.bradendustin.BDKitPvP.level3kits.*;
-import com.bradendustin.BDKitPvP.level4kits.*;
-import com.bradendustin.BDKitPvP.level5kits.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.ScoreboardManager;
+
+import com.bradendustin.BDKitPvP.defaultkits.Archer;
+import com.bradendustin.BDKitPvP.defaultkits.Fisherman;
+import com.bradendustin.BDKitPvP.defaultkits.Grandpa;
+import com.bradendustin.BDKitPvP.defaultkits.Knight;
+import com.bradendustin.BDKitPvP.level2kits.Chemist;
+import com.bradendustin.BDKitPvP.level2kits.*;
+import com.bradendustin.BDKitPvP.listeners.Events;
 
 public class Main extends JavaPlugin {
 	
@@ -69,6 +76,11 @@ public class Main extends JavaPlugin {
 	
 	public void onEnable(){
 		commands();
+
+		
+		PluginManager pm = getServer().getPluginManager();
+		  pm.registerEvents(new Events(this), this);
+		  
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
 		 Objective kills = board.registerNewObjective("kills", "playerKillCount");
@@ -78,9 +90,16 @@ public class Main extends JavaPlugin {
 		 Objective showhealth = board.registerNewObjective("showhealth", "health");
 		 showhealth.setDisplaySlot(DisplaySlot.BELOW_NAME);
 		 showhealth.setDisplayName("/ 20");
+		
+	
 	}
 	
-	
+	@EventHandler
+	public void onJoin(PlayerJoinEvent e){
+		Player p = e.getPlayer();
+		Scoreboard board = p.getScoreboard();
+		p.setScoreboard(board);
+	}
 	
 	
 	public void commands(){
@@ -97,7 +116,7 @@ public class Main extends JavaPlugin {
 		//*************Level 2 Executors*********//
 		//****************************************//
 		getCommand("Chemist").setExecutor(new Chemist(this));
-		getCommand("Archer").setExecutor(new Archer(this));
+		getCommand("Flash").setExecutor(new Flash(this));
 		getCommand("Fisherman").setExecutor(new Fisherman(this));
 		getCommand("Grandpa").setExecutor(new Grandpa(this));
 	}

@@ -1,6 +1,5 @@
 package com.bradendustin.BDKitPvP.listeners;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Damageable;
 import org.bukkit.entity.Entity;
