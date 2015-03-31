@@ -1,8 +1,8 @@
-name: KitPvP
+name: CosmicPvP
 author: Braden
-version: 1.0
+version: 2.0
 description: KitPvP
-main: me.bradendustin.BDKitPvP.Main
+main: com.bradendustin.BDKitPvP.Main
 commands:
   Archer:
     description: Gives the archer kit.
@@ -14,3 +14,25 @@ commands:
     description: Gives the Knight kit.
   Chemist:
     description: Gives the Chemist kit.
+  Flash:
+    description: Gives the Flash kit.
+  Tank:
+    description: Gives the Tank kit.
+  Wizard:
+    description: Gives the Wizard kit.
+  Boxer:
+    description: Gives the Boxer kit.
+  Enderman:
+    description: Gives the Enderman kit.
+  Thor:
+    description: Gives the Thor kit.
+  Shadow:
+    description: Gives the Shadow kit.
+  Viper:
+    description: Gives the Viper kit.
+  Titan:
+    description: Gives the Titan kit.
+  Enderman:
+    description: Gives the Enderman kit.
+  HorseRider:
+    description: Gives the HorseRider kit.

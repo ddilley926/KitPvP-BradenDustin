@@ -31,13 +31,12 @@ public class Main extends JavaPlugin {
 	public ArrayList<String> Knight = new ArrayList<String>();
 	public ArrayList<String> Archer = new ArrayList<String>();
 	public ArrayList<String> Fisherman = new ArrayList<String>();
-	public ArrayList<String> Flash = new ArrayList<String>();
 	public ArrayList<String> Grandpa = new ArrayList<String>();
 	
 	//*****************************************//
 	//*************Level 2 ArrayLists*********//
 	//****************************************//
-	
+	public ArrayList<String> Flash = new ArrayList<String>();
 	public ArrayList<String> Chemist = new ArrayList<String>();
 	public ArrayList<String> Tank = new ArrayList<String>();
 	public ArrayList<String> Wizard = new ArrayList<String>();
@@ -47,7 +46,6 @@ public class Main extends JavaPlugin {
 	//****************************************//
 	
 	public ArrayList<String> Boxer = new ArrayList<String>();
-	public ArrayList<String> DarkWizard = new ArrayList<String>();
 	public ArrayList<String> Enderman = new ArrayList<String>();
 	public ArrayList<String> Thor = new ArrayList<String>();
 	
@@ -55,10 +53,9 @@ public class Main extends JavaPlugin {
 	//*************Level 4 ArrayLists*********//
 	//****************************************//
 	
-	public ArrayList<String> Blink = new ArrayList<String>();
 	public ArrayList<String> ExplosiveArcher = new ArrayList<String>();
 	public ArrayList<String> Shadow = new ArrayList<String>();
-	public ArrayList<String> Witch = new ArrayList<String>();
+	public ArrayList<String> Viper = new ArrayList<String>();
 	
 	//*****************************************//
 	//*************Level 5 ArrayLists*********//
@@ -69,8 +66,15 @@ public class Main extends JavaPlugin {
 		public ArrayList<String> Titan = new ArrayList<String>();
 		public ArrayList<String> UltraFlash = new ArrayList<String>();
 		
-	
-	
+		//*****************************************//
+		//**********Donator ArrayLists*********//
+		//****************************************//
+		public ArrayList<String> Advanced = new ArrayList<String>();
+		public ArrayList<String> Expert = new ArrayList<String>();
+		public ArrayList<String> Demon = new ArrayList<String>();
+		public ArrayList<String> Veteran = new ArrayList<String>();
+		public ArrayList<String> God = new ArrayList<String>();
+		
 	public ArrayList<String> kitused = new ArrayList<String>();
 	
 	
@@ -117,8 +121,29 @@ public class Main extends JavaPlugin {
 		//****************************************//
 		getCommand("Chemist").setExecutor(new Chemist(this));
 		getCommand("Flash").setExecutor(new Flash(this));
+<<<<<<< HEAD
 		getCommand("Fisherman").setExecutor(new Fisherman(this));
 		getCommand("Grandpa").setExecutor(new Grandpa(this));
+=======
+		getCommand("Tank").setExecutor(new Tank(this));
+		getCommand("Wizard").setExecutor(new Wizard(this));
+		//*****************************************//
+		//*************Level 3 Executors*********//
+		//****************************************//
+		getCommand("Boxer").setExecutor(new Boxer(this));
+		getCommand("Enderman").setExecutor(new Enderman(this));
+		getCommand("Thor").setExecutor(new Thor(this));
+		//*****************************************//
+		//*************Level 4 Executors*********//
+		//****************************************//
+		getCommand("Shadow").setExecutor(new Shadow(this));
+		getCommand("Viper").setExecutor(new Viper(this));
+		//*****************************************//
+		//*************Level 5 Executors*********//
+		//****************************************//
+		getCommand("HorseRider").setExecutor(new HorseRider(this));
+		getCommand("Titan").setExecutor(new Titan(this));
+>>>>>>> origin/master
 	}
 	
 	
