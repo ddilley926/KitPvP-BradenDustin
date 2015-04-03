@@ -6,6 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,10 +20,19 @@ import com.bradendustin.BDKitPvP.defaultkits.Fisherman;
 import com.bradendustin.BDKitPvP.defaultkits.Grandpa;
 import com.bradendustin.BDKitPvP.defaultkits.Knight;
 import com.bradendustin.BDKitPvP.level2kits.Chemist;
-import com.bradendustin.BDKitPvP.level2kits.*;
+import com.bradendustin.BDKitPvP.level2kits.Flash;
+import com.bradendustin.BDKitPvP.level2kits.Tank;
+import com.bradendustin.BDKitPvP.level2kits.Wizard;
+import com.bradendustin.BDKitPvP.level3kits.Boxer;
+import com.bradendustin.BDKitPvP.level3kits.Enderman;
+import com.bradendustin.BDKitPvP.level3kits.Thor;
+import com.bradendustin.BDKitPvP.level4kits.Shadow;
+import com.bradendustin.BDKitPvP.level4kits.Viper;
+import com.bradendustin.BDKitPvP.level5kits.HorseRider;
+import com.bradendustin.BDKitPvP.level5kits.Titan;
 import com.bradendustin.BDKitPvP.listeners.Events;
 
-public class Main extends JavaPlugin {
+public class Main extends JavaPlugin implements Listener {
 	
 	//*********************************************//
 	//***************Level 1 ArrayLists***********//
@@ -80,30 +90,9 @@ public class Main extends JavaPlugin {
 	
 	public void onEnable(){
 		commands();
-
-		
-		PluginManager pm = getServer().getPluginManager();
-		  pm.registerEvents(new Events(this), this);
-		  
-		ScoreboardManager manager = Bukkit.getScoreboardManager();
-		Scoreboard board = manager.getNewScoreboard();
-		 Objective kills = board.registerNewObjective("kills", "playerKillCount");
-		 kills.setDisplaySlot(DisplaySlot.SIDEBAR);
-		 kills.setDisplayName(ChatColor.RED + "Kills"); 
-		 
-		 Objective showhealth = board.registerNewObjective("showhealth", "health");
-		 showhealth.setDisplaySlot(DisplaySlot.BELOW_NAME);
-		 showhealth.setDisplayName("/ 20");
-		
-	
 	}
 	
-	@EventHandler
-	public void onJoin(PlayerJoinEvent e){
-		Player p = e.getPlayer();
-		Scoreboard board = p.getScoreboard();
-		p.setScoreboard(board);
-	}
+	
 	
 	
 	public void commands(){
@@ -121,10 +110,6 @@ public class Main extends JavaPlugin {
 		//****************************************//
 		getCommand("Chemist").setExecutor(new Chemist(this));
 		getCommand("Flash").setExecutor(new Flash(this));
-<<<<<<< HEAD
-		getCommand("Fisherman").setExecutor(new Fisherman(this));
-		getCommand("Grandpa").setExecutor(new Grandpa(this));
-=======
 		getCommand("Tank").setExecutor(new Tank(this));
 		getCommand("Wizard").setExecutor(new Wizard(this));
 		//*****************************************//
@@ -143,7 +128,7 @@ public class Main extends JavaPlugin {
 		//****************************************//
 		getCommand("HorseRider").setExecutor(new HorseRider(this));
 		getCommand("Titan").setExecutor(new Titan(this));
->>>>>>> origin/master
+
 	}
 	
 	

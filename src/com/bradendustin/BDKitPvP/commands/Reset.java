@@ -18,9 +18,12 @@ public class Reset implements CommandExecutor{
 			
 			p.sendMessage(ChatColor.RED + "Are you sure you want to do this? This will remove access to all of your kits. Type /reset confirm to confirm your reset.");
 			
-			if(cmd.getName().equalsIgnoreCase("reset" + "confirm")){
-				Bukkit.dispatchCommand(p , "manuadd" + p.getName() + "default");
-		
+			if (args[0].equalsIgnoreCase("confirm")) {
+				
+				Bukkit.dispatchCommand(p , "manudelp" + p.getName() + "level2kits.use");
+				Bukkit.dispatchCommand(p , "manudelp" + " " + p.getName() + " " + "level3kits.use");
+				Bukkit.dispatchCommand(p , "manudelp" + " " + p.getName() + " " + "level4kits.use");
+				Bukkit.dispatchCommand(p , "manudelp" + " " + p.getName() + " " + "level5kits.use");
 			}	
 		}
 		return false;
