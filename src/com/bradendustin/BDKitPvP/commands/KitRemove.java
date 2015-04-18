@@ -4,6 +4,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
 
 import com.bradendustin.BDKitPvP.Main;
 
@@ -20,7 +21,10 @@ public class KitRemove implements CommandExecutor{
 		if(arg1.getName().equalsIgnoreCase("kitremove")){
 			Player p = (Player) arg0;
 		p.getInventory().clear();
-			
+		for (PotionEffect effect : p.getActivePotionEffects())
+		{
+			p.removePotionEffect(effect.getType());
+		}
 			if(p.hasPermission("kitremove.use")){
 				 if(plugin.kitused.contains(p.getName())){
 		        	 plugin.kitused.remove(p.getName());
@@ -77,4 +81,4 @@ public class KitRemove implements CommandExecutor{
 	}
 	
 	
-}
+

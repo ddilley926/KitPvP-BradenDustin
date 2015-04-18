@@ -7,8 +7,15 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Reset implements CommandExecutor{
+import com.bradendustin.BDKitPvP.Main;
 
+public class Reset implements CommandExecutor{
+	public Main plugin;
+	public Reset(Main instance){
+		plugin = instance;
+	}
+	
+	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
 			String[] args) {

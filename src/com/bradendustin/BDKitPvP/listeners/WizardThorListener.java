@@ -1,5 +1,7 @@
 package com.bradendustin.BDKitPvP.listeners;
 
+import java.util.ArrayList;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -22,7 +24,8 @@ public class WizardThorListener implements Listener {
 	public WizardThorListener(Main instance){
 	plugin = instance;
 	}
-	
+
+	private ArrayList<String> cooldown = new ArrayList<String>();
 	@EventHandler
 	public void onWizard(PlayerInteractEvent e){
 		Player p = e.getPlayer();
@@ -38,23 +41,37 @@ public class WizardThorListener implements Listener {
 	}
 	@EventHandler
     public void onAttack(EntityDamageByEntityEvent p){
+		
         Entity attacker = p.getDamager();
         Entity defender = p.getEntity();
  if(plugin.Thor.contains(attacker)){
-        if(attacker instanceof Player ){
+	 cooldown.add(((Player) attacker).getName());
+	 
+        if(attacker instanceof Player){
+        	if(cooldown.contains(((Player) attacker).getName())){
+        		p.setCancelled(true);
+        	}
         World world = defender.getWorld();
        
         Location location = defender.getLocation();
         world.strikeLightning(location);
-           }
+        plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
+        	public void run(){
+        		((Player) attacker).sendMessage(ChatColor.RED + "You will not strike lightning again for twenty seconds.");
+        		cooldown.remove(((Player) attacker).getName());
+        	
+        
+           
     }
     	    		
     	    			
     	    		
-    	    	}
+    	    	}, 400L);
 }
     	    	
-    	    		
+ }
+	}
+}
     	    	
     	    	
     	    	

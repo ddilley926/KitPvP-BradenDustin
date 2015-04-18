@@ -36,3 +36,5 @@ commands:
     description: Gives the Enderman kit.
   HorseRider:
     description: Gives the HorseRider kit.
+   Reset:
+    description: Gives the HorseRider kit.

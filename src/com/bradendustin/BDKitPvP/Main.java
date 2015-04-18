@@ -15,6 +15,8 @@ import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.ScoreboardManager;
 
+import com.bradendustin.BDKitPvP.commands.KitRemove;
+import com.bradendustin.BDKitPvP.commands.Reset;
 import com.bradendustin.BDKitPvP.defaultkits.Archer;
 import com.bradendustin.BDKitPvP.defaultkits.Fisherman;
 import com.bradendustin.BDKitPvP.defaultkits.Grandpa;
@@ -33,7 +35,10 @@ import com.bradendustin.BDKitPvP.level5kits.Titan;
 import com.bradendustin.BDKitPvP.listeners.Events;
 
 public class Main extends JavaPlugin implements Listener {
-	
+	public Main plugin;
+	public Main(Main instance){
+		plugin = instance;
+	}
 	//*********************************************//
 	//***************Level 1 ArrayLists***********//
 	//********************************************//
@@ -128,8 +133,11 @@ public class Main extends JavaPlugin implements Listener {
 		//****************************************//
 		getCommand("HorseRider").setExecutor(new HorseRider(this));
 		getCommand("Titan").setExecutor(new Titan(this));
+		getCommand("Reset").setExecutor(new Reset(this));
+		getCommand("KitRemove").setExecutor(new KitRemove(this));
+	}
+	
 
 	}
 	
-	
-}
+
